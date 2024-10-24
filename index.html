@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HuntCity</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+          <button class="burger" id="burger">
+            <img src="./assets/img/contacts/menu.svg" alt="menus" class="btn-menu-icon" />
+          </button>
+          <div class="menu" id="menu">
+              <button class="close-btn" id="close-btn">&times;</button>
+              <ul>
+                  <li><a href="./index.html">Главная</a></li>
+                  <li><a href="./attractions.html">Маршруты</a></li>
+                  <li><a href="./contacts.html">Контакты</a></li>
+              </ul>
+          </div>
+          <script src="./assets/scripts/burger.js"></script>
+          <div class="header__container-logo">
+            <img src="./assets/img/contacts/logo.svg" alt="HuntCity" class="header__container-logo-icon" />
+          </div>
+          <a href="./index.html" class="header__container-name">HuntCity</a>
+        </div>
+        <nav class="header__elements">
+          <a href="./attractions.html" class="btn-routes">Маршруты</a>
+          <a class="btn-icons">
+            <img src="./assets/img/contacts/map.svg" alt="" class="btn-icon" />
+          </a>
+          <a class="btn-icons">
+            <img src="./assets/img/contacts/accaunts.svg" alt="" class="btn-icon" />
+          </a>
+        </nav>
+    </header>
+
+    <section class="main-container">
+        <div class="content-wrapper">
+          <div class="banner">
+            <img src="./assets/img/main/main.png" alt="banner" />
+            <h1 class="banner-title">Откройте для себя Ростов</h1>
+            <h2 class="banner-text">Исследуйте богатую историю, живописную культуру и захватывающие виды Ростова</h4>
+            <div class="search-containers">
+                <form action="./attractions.html" method="GET">
+                    <form class="search-containers" role="search">
+                        <div class="search-wrapper">
+                          <div class="search-icon-wrappers">
+                            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/46adb1cf78b600dff165027b594be8f7343cd4f92f6889e5c1fbe3735862efc3?apiKey=7342d0a7e8cd49c1aca8f240b4f2db7f&" class="search-icons" alt="" />
+                          </div>
+                          <label for="searchInput" class="visually-hidden">Поиск места и другое</label>
+                          <input type="search" id="searchInput" name="query" class="search-inputs" placeholder="Поиск места..." aria-label="Поиск места..." required/>
+                          <div class="search-button-wrappers">
+                            <button type="submit" class="search-buttons">Поиск</button>
+                          </div>
+                        </div>
+                    </form>
+                </form>
+            </div>
+          </div>
+          <section class="why-visit-section">
+            <div class="section-content">
+              <h2 class="section-title">Почему стоит посетить Ростов?</h2>
+              <p class="section-description">
+                Ростов - город с богатой историей, живописной культурой и захватывающими видами. Исследуйте уникальное сочетание традиционной русской архитектуры, современной городской жизни и спокойной красоты Ростовской области.
+              </p>
+            </div>
+            <div class="feature-grid">
+              <article class="feature-card">
+                <img src="./assets/img/main/hram.svg" alt="Храм" class="feature-icon" />
+                <div class="feature-content">
+                  <h3 class="feature-title">Богатая история</h3>
+                  <p class="feature-description">
+                    Исследуйте уникальное сочетание традиционной русской архитектуры, современной городской жизни и спокойной красоты Ростовской области.
+                  </p>
+                </div>
+              </article>
+              <article class="feature-card">
+                <img src="./assets/img/main/lang.svg" alt="Картинка" class="feature-icon" />
+                <div class="feature-content">
+                  <h3 class="feature-title">Живописная культура</h3>
+                  <p class="feature-description">
+                    Почувствуйте богатое культурное наследие Ростова через его музеи, художественные галереи и традиционную русскую кухню.
+                  </p>
+                </div>
+              </article>
+              <article class="feature-card">
+                <img src="./assets/img/main/image.svg" alt="Икона захватывающих видов" class="feature-icon" />
+                <div class="feature-content">
+                  <h3 class="feature-title">Захватывающие виды</h3>
+                  <p class="feature-description">
+                    Погрузитесь в захватывающие виды Ростовской области, от спокойной реки Дон до величественного Ростовского кремля.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img class="slide-img" src="./assets/img/attractions/pocrhram.jpg" alt="Слайд 1">
+                    <div class="caption">
+                        <h2>Старо-Покровский храм</h2>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img class="slide-img" src="./assets/img/main/test.jpg" alt="Слайд 2">
+                    <div class="caption">
+                        <h2>Памятник Тачанка</h2>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img class="slide-img" src="./assets/img/attractions/star.jpg" alt="Слайд 3">
+                    <div class="caption">
+                        <h2>Аллея звёзд</h2>
+                    </div>
+                </div>
+                <div class="slide">
+                  <img class="slide-img" src="./assets/img/attractions/puskin.png" alt="Слайд 4">
+                  <div class="caption">
+                      <h2>Пушкинская улица</h2>
+                  </div>
+              </div>
+              <div class="slide">
+                <img class="slide-img" src="./assets/img/attractions/ogon.jpg" alt="Слайд 5">
+                <div class="caption">
+                    <h2>Мемориал Вечный Огонь</h2>
+                </div>
+            </div>
+            </div>
+            <div class="arrows">
+                <button class="arrow" id="prev">&#10094;</button>
+                <button class="arrow" id="next">&#10095;</button>
+            </div>
+            <div class="dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
+            </div>
+          </div>
+          <script src="./assets/scripts/slider.js"></script>
+
+          <section class="explore-section">
+            <div class="card-container1">
+              <article class="card">
+                <img loading="lazy" src="./assets/img/main/dostoprim.png" class="card-image" alt="Ростовский кремль" />
+                <div class="card-content1">
+                  <div class="card-text1">
+                    <h2 class="card-title1">Исследуйте достопримечательности Ростова</h2>
+                    <p class="card-description1">От исторического Ростовского кремля до живописного Центрального рынка, здесь найдется что-то для каждого.</p>
+                  </div>
+                  <a href="./attractions.html" class="explore-button">Исследовать</a>
+                </div>
+              </article>
+              
+              <article class="card">
+                <img loading="lazy" src="./assets/img/main/restoran.png" class="card-image" alt="Местный ресторан в Ростове" />
+                <div class="card-content1">
+                  <div class="card-text1">
+                    <h2 class="card-title1">Найдите лучшие местные рестораны</h2>
+                    <p class="card-description1">Насладитесь аутентичной русской кухней в наших рейтинговых ресторанах, от уютного борща до сытных пельменей.</p>
+                  </div>
+                  <a href="./attractions.html" class="explore-button">Исследовать</a>
+                </div>
+              </article>
+              
+              <article class="card">
+                <img loading="lazy" src="./assets/img/main/projivanie.png" class="card-image" alt="Роскошный отель в Ростове" />
+                <div class="card-content1">
+                  <div class="card-text1">
+                    <h2 class="card-title1">Откройте прекрасные места для проживания</h2>
+                    <p class="card-description1">Отдыхайте как царь в наших роскошных отелях, с видом на величественный Ростовский кремль или спокойный Дон.</p>
+                  </div>
+                  <a href="./attractions.html" class="explore-button">Исследовать</a>
+                </div>
+              </article>
+
+              <article class="card">
+                <img loading="lazy" src="./assets/img/main/suvenir.png" class="card-image" alt="Роскошный отель в Ростове" />
+                <div class="card-content1">
+                  <div class="card-text1">
+                    <h2 class="card-title1">Покупайте уникальные подарки и сувениры</h2>
+                    <p class="card-description1">Найдите идеальные сувениры в магазинах, от традиционных матрешек до ручной работы самоваров.</p>
+                  </div>
+                  <a href="./attractions.html" class="explore-button">Исследовать</a>
+                </div>
+              </article>
+
+              <article class="card">
+                <img loading="lazy" src="./assets/img/main/idealday.png" class="card-image" alt="Роскошный отель в Ростове" />
+                <div class="card-content1">
+                  <div class="card-text1">
+                    <h2 class="card-title1">Планируйте идеальный день в Ростове</h2>
+                    <p class="card-description1">Следуйте нашим кураторским маршрутам для идеального дня в Ростове, от утренней прогулки в парке до вечера в балете.</p>
+                  </div>
+                  <a href="./attractions.html" class="explore-button">Исследовать</a>
+                </div>
+              </article>
+            </section>
+
+            <div class="yandex-map">
+              <a href="https://yandex.ru/maps/39/rostov-na-donu/?ll=39.710977%2C47.233375&mode=usermaps&source=constructorLink&um=constructor%3A584952951986903522ce3d4e34343fd8df51b97ff6a6d8df7252996c0d7aa180&utm_medium=mapframe&utm_source=maps&z=12" class="yandex-map_map"></a>
+              <iframe src="https://yandex.ru/map-widget/v1/?ll=39.710977%2C47.233375&mode=usermaps&source=constructorLink&um=constructor%3A584952951986903522ce3d4e34343fd8df51b97ff6a6d8df7252996c0d7aa180&z=12" class="yandex-map_main"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-inner">
+            <nav class="footer-menu">
+              <a href="./contacts.html" class="menu-item">Контакты</a>
+              <a href="./about.html" class="menu-item">О Проекте</a>
+              <a href="./donate.html" class="menu-item">Поддержать</a>
+            </nav>
+            <div class="social-media">
+              <div class="social-icons">
+                <img src="./assets/img/contacts/tg.svg" class="social-icon" alt="TG" />
+                <div class="vk-icon">
+                  <img src="./assets/img/contacts/VK.svg" class="social-icon" alt="VK" />
+                </div>
+                <div class="youtube-icon">
+                  <img src="./assets/img/contacts/YouTube.svg" class="youtube-img" alt="YouTube icon" />
+                </div>
+              </div>
+            </div>
+            <p class="copyright">@2024 HuntCity. Все права защищены.</p>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

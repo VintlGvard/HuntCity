@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HuntCity - Маршруты</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <button class="burger" id="burger">
+        <img src="./assets/img/contacts/menu.svg" alt="menus" class="btn-menu-icon" />
+      </button>
+      <div class="menu" id="menu">
+          <button class="close-btn" id="close-btn">&times;</button>
+          <ul>
+              <li><a href="./index.html">Главная</a></li>
+              <li><a href="./attractions.html">Маршруты</a></li>
+              <li><a href="./contacts.html">Контакты</a></li>
+          </ul>
+      </div>
+      <script src="./assets/scripts/burger.js"></script>
+      <div class="header__container-logo">
+        <img src="./assets/img/contacts/logo.svg" alt="HuntCity" class="header__container-logo-icon" />
+      </div>
+      <a href="./index.html" class="header__container-name">HuntCity</a>
+    </div>
+    <nav class="header__elements">
+      <a href="./attractions.html" class="btn-routes">Маршруты</a>
+      <a class="btn-icons">
+        <img src="./assets/img/contacts/map.svg" alt="" class="btn-icon" />
+      </a>
+      <a class="btn-icons">
+        <img src="./assets/img/contacts/accaunts.svg" alt="" class="btn-icon" />
+      </a>
+    </nav>
+</header>
+
+
+    <section class="main-container">
+        <div class="content-wrapper">
+          <header class="hero-banner">
+            <div class="hero-content">
+              <img src="./assets/img/attractions/rostov.png" alt="Panoramic" class="hero-image" />
+              <h1 class="hero-title">Достопримечательности Ростова-на-Дону</h1>
+            </div>
+          </header>
+          <div class="main-content">
+            <div class="content-layout">
+              <aside class="sidebar">
+                <div class="filter-container">
+                  <div class="filter-header">
+                    <h2 class="filter-title">Фильтры</h2>
+                    <div class="reset-filter" onclick="filterByCategory('all')">
+                      <span class="reset-text">Сбросить</span>
+                      <img src="./assets/img/attractions/reset.svg" alt="" class="reset-icon" />
+                    </div>
+                  </div>
+                  <div class="filter-type">
+                    <span>Тип маршрута</span> 
+                  </div>
+                  <div class="filter-options">
+                    <div class="filter-option" onclick="filterByCategory('attractions')">
+                      <button class="option-text">Культурные объекты</button>
+                    </div>
+                    <div class="filter-option" onclick="filterByCategory('statue')">
+                      <button class="option-text">Памятники и статуи</button>
+                    </div>
+                    <div class="filter-option" onclick="filterByCategory('observation')">
+                      <button class="option-text">Обзорные площадки</button>
+                    </div>
+                    <div class="filter-option" onclick="filterByCategory('churches')">
+                      <button class="option-text">Церкви и соборы</button>
+                    </div>
+          </div>
+      </aside>
+      <main class="main-section">
+      <div class="main-content-wrapper">
+        <div class="header-wrapper">
+          <h2 class="section-title">Интересные места</h2>
+          <form class="search-container" role="search" method="POST">
+            <label for="search-input" class="visually-hidden">Поиск места</label>
+            <div class="search-icon">
+              <img src="./assets/img/attractions/lupa.svg" alt="" class="search-icon-image" />
+            </div>
+            <input type="search" id="searchInput" class="search-input" placeholder="Поиск места..." oninput="filterItems()"/>
+          </form>
+        </div>
+        <div class="card-grid" id="itemContainer">
+          <article class="item" data-category="attractions">
+            <div class="card-image-container">
+              <div class="image-wrapper">
+                <img src="./assets/img/attractions/puskin.png" alt="Пушкинская улица" class="hero-image" />
+                <span class="popular-tag">Популярное</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <span class="attraction-type">• Культурные объекты и достопримечательности</span>
+              <h3 class="attraction-title">Пушкинская улица (Пушкинский бульвар)</h3>
+              <p class="attraction-description">Известное место, названное в честь поэта Александра Пушкина. Она славится зелеными насаждениями, памятниками и культурными событиями, привлекая жителей и туристов.</p>
+            </div>
+          </article>
+          <article class="item" data-category="statue">
+            <div class="card-image-container">
+              <div class="image-wrapper">
+                <img src="./assets/img/attractions/ckathanka.png" alt="Памятник Тачанка" class="hero-image" />
+                <span class="popular-tag">Популярное</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <span class="attraction-type">• Памятники и статуи</span>
+              <h3 class="attraction-title">Памятник Тачанка</h3>
+              <p class="attraction-description">Памятник Тачанка в Москве посвящен конному орудию, использовавшемуся в Гражданской войне, символизируя мужество и героизм бойцов.</p>
+            </div>
+          </article>
+          <article class="item" data-category="attractions">
+            <div class="card-image-container">
+              <div class="image-wrapper">
+                <img src="./assets/img/attractions/sadovaya.png" alt="Улица Большая Садовая" class="hero-image" />
+                <span class="popular-tag">Популярное</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <span class="attraction-type">• Культурные объекты и достопримечательности</span>
+              <h3 class="attraction-title">Улица Большая Садовая</h3>
+              <p class="attraction-description">Улица Большая Садовая в Москве — центральная улица с историческими зданиями и культурными учреждениями, важная транспортная артерия города.</p>
+            </div>
+          </article>
+          <article class="item" data-category="observation">
+            <div class="card-image-container">
+              <div class="image-wrapper">
+                <img src="./assets/img/attractions/balka.png" alt="Мемориал Змиёвская балка" class="hero-image" />
+              </div>
+            </div>
+            <div class="card-content">
+              <span class="attraction-type">• Обзорные площадки</span>
+              <h3 class="attraction-title">Мемориал Змиёвская балка</h3>
+              <p class="attraction-description">Мемориал Змиёвская балка в Ростове-на-Дону посвящен жертвам сталинских репрессий и служит местом памяти и скорби.</p>
+            </div>
+          </article>
+          <article class="item" data-category="statue">
+            <div class="card-image-container">
+              <div class="image-wrapper">
+                <img src="./assets/img/attractions/kupez.png" alt="Купец-коробейник и его кот" class="hero-image" />
+              </div>
+            </div>
+            <div class="card-content">
+              <span class="attraction-type">• Памятники и статуи</span>
+              <h3 class="attraction-title">Купец-коробейник и его кот</h3>
+              <p class="attraction-description">Скульптурная композиция в Москве изображает купца с котом и символизирует торговую культуру и народные традиции России. Она отражает атмосферу старинного города и его уют.</p>
+            </div>
+          </article>
+          <article class="item" data-category="churches">
+            <div class="card-image-container">
+              <div class="image-wrapper">
+                <img src="./assets/img/attractions/monast.png" alt="Свято-Иверский женский монастырь" class="hero-image" />
+              </div>
+            </div>
+            <div class="card-content">
+              <span class="attraction-type">• Церкви и соборы</span>
+              <h3 class="attraction-title">Свято-Иверский женский монастырь</h3>
+              <p class="attraction-description">Монастырь, основанный в XVII веке, известен своей архитектурой и чудотворной иконой Иверской Божьей Матери. Монастырь привлекает паломников и туристов.</p>
+            </div>
+          </article>
+          <article class="item" data-category="attractions">
+            <div class="card-image-container">
+              <div class="image-wrapper">
+                <img src="./assets/img/attractions/teatre.png" alt="Театральная площадь" class="hero-image" />
+              </div>
+            </div>
+            <div class="card-content">
+              <span class="attraction-type">• Культурные объекты и достопримечательности</span>
+              <h3 class="attraction-title">Театральная площадь</h3>
+              <p class="attraction-description">Центральная площадь в Ростове-на-Дону известна главными театрами города и служит культурным центром для мероприятий и праздников.</p>
+            </div>
+          </article>
+          <article class="item" data-category="statue">
+            <div class="card-image-container">
+              <div class="image-wrapper">
+                <img src="./assets/img/attractions/pamat.png" alt="Памятник Александру Сергеевичу Пушкину" class="hero-image" />
+              </div>
+            </div>
+            <div class="card-content">
+              <span class="attraction-type">• Памятники и статуи</span>
+              <h3 class="attraction-title">Памятник Александру Сергеевичу Пушкину</h3>
+              <p class="attraction-description">Известное место, названное в честь поэта Александра Пушкина. Она славится зелеными насаждениями, памятниками и культурными событиями, привлекая жителей и туристов.</p>
+            </div>
+          </article>
+          <article class="item" data-category="observation">
+            <div class="card-image-container">
+              <div class="image-wrapper">
+                <img src="./assets/img/attractions/kumjenskaya.png" alt="Мемориальный комплекс Кумженская роща" class="hero-image" />
+              </div>
+            </div>
+            <div class="card-content">
+              <span class="attraction-type">• Обзорные площадки</span>
+              <h3 class="attraction-title">Мемориальный комплекс Кумженская роща</h3>
+              <p class="attraction-description">Мемориальный комплекс в Кумженской роще в Ростове-на-Дону посвящен жертвам ВО войны и служит местом памяти и торжеств.</p>
+            </div>
+          </article>
+          <article class="item" data-category="statue">
+            <div class="card-image-container">
+              <div class="image-wrapper">
+                <img src="./assets/img/attractions/lodka.jpg" alt="Григорий и Аксинья в лодке" class="hero-image" />
+              </div>
+            </div>
+            <div class="card-content">
+              <span class="attraction-type">• Памятники и статуи</span>
+              <h3 class="attraction-title">Григорий и Аксинья в лодке</h3>
+              <p class="attraction-description">
+                Скульптура "Григорий и Аксинья в лодке" Вячеслава Клыкова изображает героев романа "Тихий Дон" и символизирует их страстные отношения.</p>
+            </div>
+          </article>
+          <article class="item" data-category="statue">
+            <div class="card-image-container">
+              <div class="image-wrapper">
+                <img src="./assets/img/attractions/ogon.jpg" alt="Мемориал Вечный Огонь" class="hero-image" />
+              </div>
+            </div>
+            <div class="card-content">
+              <span class="attraction-type">• Памятники и статуи</span>
+              <h3 class="attraction-title">Мемориал Вечный Огонь</h3>
+              <p class="attraction-description">
+                Мемориал Вечный Огонь — памятник в честь павших солдат Великой Отечественной войны, символизирующий их бессмертие.</p>
+            </div>
+          </article>
+          <article class="item" data-category="churches">
+            <div class="card-image-container">
+              <div class="image-wrapper">
+                <img src="./assets/img/attractions/pocrhram.jpg" alt="Старо-Покровский храм" class="hero-image" />
+              </div>
+            </div>
+            <div class="card-content">
+              <span class="attraction-type">• Церкви и соборы</span>
+              <h3 class="attraction-title">Старо-Покровский храм</h3>
+              <p class="attraction-description">
+                Старо-Покровский храм — православный храм в России, посвященный Покрову Пресвятой Богородицы, известный своей архитектурой и историей.</p>
+            </div>
+          </article>
+          <article class="item" data-category="attractions">
+            <div class="card-image-container">
+              <div class="image-wrapper">
+                <img src="./assets/img/attractions/mipomnim.jpg" alt="Мы вас помним" class="hero-image" />
+              </div>
+            </div>
+            <div class="card-content">
+              <span class="attraction-type">• Культурные объекты и достопримечательности</span>
+              <h3 class="attraction-title">Мы вас помним</h3>
+              <p class="attraction-description">
+                Памятный знак узников — шпала с колючей проволокой и надписью «Мы вас помним». Рядом памятник: «Здесь похоронены советские патриоты, замученные фашистами».</p>
+            </div>
+          </article>
+          <article class="item" data-category="churches">
+            <div class="card-image-container">
+              <div class="image-wrapper">
+                <img src="./assets/img/attractions/swathram.jpg" alt="Храм Покрова Пресвятой Богородицы" class="hero-image" />
+              </div>
+            </div>
+            <div class="card-content">
+              <span class="attraction-type">• Церкви и соборы</span>
+              <h3 class="attraction-title">Храм Покрова Пресвятой Богородицы</h3>
+              <p class="attraction-description">
+                Храм Покрова Пресвятой Богородицы — православный храм XIX века, известный своей архитектурой и активным использованием для богослужений.</p>
+            </div>
+          </article>
+          <article class="item" data-category="attractions">
+            <div class="card-image-container">
+              <div class="image-wrapper">
+                <img src="./assets/img/attractions/star.jpg" alt="Аллея звёзд" class="hero-image" />
+              </div>
+            </div>
+            <div class="card-content">
+              <span class="attraction-type">• Культурные объекты и достопримечательности</span>
+              <h3 class="attraction-title">Аллея звёзд</h3>
+              <p class="attraction-description">
+                Аллея звёзд — памятное место, где увековечены имена известных личностей в культуре и искусстве. Звёзды на тротуаре напоминают о их достижениях.</p>
+            </div>
+          </article>
+        </div>
+        <div class="pagination" id="pagination"></div>
+      </div>
+      </main>
+      </div>
+      </div>
+      </section>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-inner">
+            <nav class="footer-menu">
+              <a href="./contacts.html" class="menu-item">Контакты</a>
+              <a href="./about.html" class="menu-item">О Проекте</a>
+              <a href="./donate.html" class="menu-item">Поддержать</a>
+            </nav>
+            <div class="social-media">
+              <div class="social-icons">
+                <img src="./assets/img/contacts/tg.svg" class="social-icon" alt="TG" />
+                <div class="vk-icon">
+                  <img src="./assets/img/contacts/VK.svg" class="social-icon" alt="VK" />
+                </div>
+                <div class="youtube-icon">
+                  <img src="./assets/img/contacts/YouTube.svg" class="youtube-img" alt="YouTube icon" />
+                </div>
+              </div>
+            </div>
+            <p class="copyright">@2024 HuntCity. Все права защищены.</p>
+          </div>
+        </div>
+      </footer>
+    <script src="./assets/scripts/attraction.js"></script>
+</body>
+</html>

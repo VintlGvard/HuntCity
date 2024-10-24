@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HuntCity - Контакты</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <button class="burger" id="burger">
+        <img src="./assets/img/contacts/menu.svg" alt="menus" class="btn-menu-icon" />
+      </button>
+      <div class="menu" id="menu">
+          <button class="close-btn" id="close-btn">&times;</button>
+          <ul>
+              <li><a href="./index.html">Главная</a></li>
+              <li><a href="./attractions.html">Маршруты</a></li>
+              <li><a href="./contacts.html">Контакты</a></li>
+          </ul>
+      </div>
+      <script src="./assets/scripts/burger.js"></script>
+      <div class="header__container-logo">
+        <img src="./assets/img/contacts/logo.svg" alt="HuntCity" class="header__container-logo-icon" />
+      </div>
+      <a href="./index.html" class="header__container-name">HuntCity</a>
+    </div>
+    <nav class="header__elements">
+      <a href="./attractions.html" class="btn-routes">Маршруты</a>
+      <a class="btn-icons">
+        <img src="./assets/img/contacts/map.svg" alt="" class="btn-icon" />
+      </a>
+      <a class="btn-icons">
+        <img src="./assets/img/contacts/accaunts.svg" alt="" class="btn-icon" />
+      </a>
+    </nav>
+</header>
+    <section class="main-contact-section">
+        <div class="main-contact-container">
+            <header class="main-contact-header">
+                <div>
+                    <h1 class="main-contact-title">Контакты HuntCity</h1>
+                    <p class="main-contact-description">Есть вопрос о вашем визите? Мы здесь, чтобы вам помочь.</p>
+                </div>
+            </header>
+            
+            <div class="main-info-box">
+                <div class="main-icon-wrapper">
+                    <img src="./assets/img/contacts/vopros.svg" alt="" class="main-icon" />
+                </div>
+                <div class="main-info-content">
+                    <h2 class="main-info-title">Вопросы?</h2>
+                    <p class="main-info-text">Получите быстрые ответы от сотрудников HuntCity и прошлых посетителей.</p>
+                </div>
+                <button class="main-action-button" id="openModal">
+                    <span class="main-button-text">Связаться с нами</span>
+                </button>
+            </div>
+            
+            <div class="main-info-box">
+                <div class="main-icon-wrapper">
+                    <img src="./assets/img/contacts/adress.svg" alt="adress" class="main-icon" />
+                </div>
+                <div class="main-info-content">
+                    <h2 class="main-info-title">Адрес</h2>
+                    <p class="main-info-text">Вы можете связаться с HuntCity по следующему адресу:</p>
+                </div>
+                <div class="main-contact-detail">
+                    <p>123 Главная улица, Ростов, Россия</p>
+                </div>
+            </div>
+            
+            <div class="main-info-box">
+                <div class="main-icon-wrapper">
+                    <img src="./assets/img/contacts/mail.svg" alt="mail" class="main-icon" />
+                </div>
+                <div class="main-info-content">
+                    <h2 class="main-info-title">Электронная почта</h2>
+                    <p class="main-info-text">Напишите нам на guide@HuntCity.com для любых вопросов или проблем.</p>
+                </div>
+                <div class="main-contact-detail">
+                    <p>guide@HuntCity.com</p>
+                </div>
+            </div>
+            
+            <div class="main-info-box">
+                <div class="main-icon-wrapper">
+                    <img src="./assets/img/contacts/phone.svg" alt="number" class="main-icon" />
+                </div>
+                <div class="main-info-content">
+                    <h2 class="main-info-title">Телефон</h2>
+                    <p class="main-info-text">Позвоните нам по номеру +7 (123) 456-7890 для немедленной помощи.</p>
+                </div>
+                <div class="main-contact-detail">
+                    <p>+7 (123) 456-7890</p>
+                </div>
+            </div>
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Ваш вопрос</h3>
+                <input type="text" id="fio" placeholder="Введите ФИО" required>
+                <input type="email" id="email" placeholder="Введите почту" required>
+                <input type="text" id="question" placeholder="Введите ваш вопрос" required>
+                <button class="modal-btn" id="submit">Отправить</button>
+                <p id="message"></p>
+              </div>
+            </div>
+            <script src="./assets/scripts/modal.js"></script>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-inner">
+            <nav class="footer-menu">
+              <a href="./contacts.html" class="menu-item">Контакты</a>
+              <a href="./about.html" class="menu-item">О Проекте</a>
+              <a href="./donate.html" class="menu-item">Поддержать</a>
+            </nav>
+            <div class="social-media">
+              <div class="social-icons">
+                <img src="./assets/img/contacts/tg.svg" class="social-icon" alt="TG" />
+                <div class="vk-icon">
+                  <img src="./assets/img/contacts/VK.svg" class="social-icon" alt="VK" />
+                </div>
+                <div class="youtube-icon">
+                  <img src="./assets/img/contacts/YouTube.svg" class="youtube-img" alt="YouTube icon" />
+                </div>
+              </div>
+            </div>
+            <p class="copyright">@2024 HuntCity. Все права защищены.</p>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
